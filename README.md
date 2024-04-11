@@ -1,5 +1,5 @@
 # Q4
-A calculator that uses Kepler's third law
+A calculator that uses Kepler's third law.
 Kepler's third law states that M(P)^2 = a^3
 Where M is the mass of a star (in stellar masses),
 P is the orbital period (in earth years),
