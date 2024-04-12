@@ -29,6 +29,7 @@ def choice():
     period()
   else:
     print('''
-    please type mass, distance, or orbital period! ''')
+    please type mass, distance, or orbital period! 
+    ''')
     choice()
 choice()
