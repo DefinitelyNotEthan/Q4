@@ -106,7 +106,7 @@ def choice():
       choice()
   elif form.lower() == 'no':
     userChoice = input("What do you want to calculate (type: distance or orbital period)? ")
-    elif userChoice.lower() == 'distance':
+    if userChoice.lower() == 'distance':
       distance2()
     elif userChoice.lower() == 'orbital period' or userChoice.lower() == 'period':
       period2()
