@@ -12,4 +12,4 @@ WEEK OF 4/22
 WEEK OF 4/29
   set up unit conversions for equations with a body orbiting a star, check math
 WEEK OF 5/6
-  Finishing touches
+  Allow the user to choose what units they want to use
