@@ -48,14 +48,16 @@ def mass():
   p2 = P * P
   a3 = a * a * a
   M = p2 / a3
-  print("The star has a mass of " + str(M) + "M☉!")
+  em = M*333000
+  print("The star has a mass of " + str(M) + "M☉ or " + str(em) + " Earths!")
 def distance():
   M = float(input("What is the mass of your star (in solar mass)?: "))
   P = float(input('What is the orbital period of your planetary body (in earth years)?: '))
   p2 = P * P
   a3 = M * p2
   a = a3**(1/3)
-  print("The planetary body is " + str(a) + "AU from its star!")
+  km = a * (1.496 * 10**8)
+  print("The planetary body is " + str(a) + "AU (" + str(km) + " km " + " from its star!")
 def period():
   a = float(input("What the distance of your planetary body from its star in AU? "))
   M = float(input("What is the mass of your star (in solar mass)?: "))
@@ -78,13 +80,9 @@ def period2():
   a = float(input("How far apart are these two bodies (in AU)? "))
   m1 = float(input("What is the mass of the object being orbited (in solar mass)? "))
   m2 = float(input("What is the mass of the object orbiting (in solar mass)? "))
-  G = 6.67430 * 10**-11
-  p2 = 3.14**2
-  deno = G*(m1 + m2)
-  numer = 4 * p2
-  frac = numer/deno
-  P2 = frac * a**3
-  P = P2**(1/2)
+  m =(m1 + m2)
+  p2 = (a**3)/m
+  P = p2**(1/2)
   print("It takes the orbiting body " + str(P) + " years to complete an orbit!")
 def choice():
   form = input("Is/are your planetary body(ies) orbiting a star (type yes or no)?: ")
