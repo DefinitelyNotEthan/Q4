@@ -5,7 +5,7 @@ Where M is the mass of a star (in stellar masses),
 P is the orbital period (in earth years),
 and a is the distance of a body in orbit from its star!
 https://people.astro.umass.edu/~weinberg/a114/handouts/concept1.pdf
-
+UPDATE: I'm now working on a calculator for Hubble's law, which states v=H{0} * D
 WEEK OF 4/22
  check my math and my unit conversions
  (if I have time I'll move on to work for the next week)
