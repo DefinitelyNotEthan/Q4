@@ -3,6 +3,7 @@ This was origonally going to be just a calculator for Kepler's third law, howeve
 Right now I have...
 - Kepler's third law
 - Hubble's law
+- Planetary Equilibrium Temperature
 
 AGENDA:
 - Week of 22/4, finish Kepler and Hubble
