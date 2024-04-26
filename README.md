@@ -11,5 +11,7 @@ AGENDA:
 - Week of 6/5, bug fixes and start reaserching/start coding new laws for this project (follow this pattern for the rest of quarter four! Keep addding to the collection of calculators for as long as I can!)
 
 SOURCES:
-- https://people.astro.umass.edu/~weinberg/a114/handouts/concept1.pdf
-- https://sites.uni.edu/morgans/astro/course/Notes/section3/math13.html
+- ASCII art source https://www.asciiart.eu/
+- On Kepler's Third Law https://people.astro.umass.edu/~weinberg/a114/handouts/concept1.pdf
+- On Hubble's Law https://sites.uni.edu/morgans/astro/course/Notes/section3/math13.html
+- On Aproximating a Habitable Zone https://ulab.studentorg.berkeley.edu/static/doc/posters/s181.pdf
