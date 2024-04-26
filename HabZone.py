@@ -18,8 +18,9 @@ __        __   _                            _
 | |__| (_| | | (__| |_| | | (_| | || (_) | |  |_|           
  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|  (_)           
 ''')
-def math():
+def themath():
  l = float(input("What is the luminosity of your star (in Watts)? "))
- ri = sqrt(l/1.1)
- ro = sqrt(1/.53)
+ ri = math.sqrt(l/1.1)
+ ro = math.sqrt(1/.53)
  print("The Habitable Zone is between " + str(ri) + " AU and " + str(ro) + " AU away!")
+themath()
