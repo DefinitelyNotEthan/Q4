@@ -4,6 +4,7 @@ Right now I have...
 - Kepler's third law
 - Hubble's law
 - A Habitable Zone calculator
+- A Planck Relation calculator
 
 AGENDA:
 - Week of 22/4, finish Kepler and Hubble
@@ -15,3 +16,4 @@ SOURCES:
 - On Kepler's Third Law https://people.astro.umass.edu/~weinberg/a114/handouts/concept1.pdf
 - On Hubble's Law https://sites.uni.edu/morgans/astro/course/Notes/section3/math13.html
 - On Aproximating a Habitable Zone https://ulab.studentorg.berkeley.edu/static/doc/posters/s181.pdf
+- Categorising light based on wavelength https://www.pas.rochester.edu/~blackman/ast104/spectrum.html
