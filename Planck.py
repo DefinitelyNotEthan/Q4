@@ -1,3 +1,6 @@
+
+from decimal import Decimal
+
 kind = "nothing"
 print('''
 __        __   _                            _        
@@ -18,6 +21,9 @@ __        __   _                            _
 | |__| (_| | | (__| |_| | | (_| | || (_) | |  |_|    
  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|  (_)    
 ''')
+def scieNo(f):
+    return '%.2E' % Decimal(f)
+
 def energy():
     f = float(input("What is the frequency of your photons (in Hz)? "))
     h = 6.626 * (10**-34)
