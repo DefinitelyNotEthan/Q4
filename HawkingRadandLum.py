@@ -38,3 +38,21 @@ __        __   _                            _
 | |__| (_| | | (__| |_| | | (_| | || (_) | |  |_|         
  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|  (_)         
  ''')
+def rad():
+    userIn = int(input("What is the mass of your Black Hole (in Kg)? "))
+    h = 1.380649e-23
+def userChoice():
+    uchoice = input("Do you want to calculate Hawking temperature or luminocity? ")
+    if uchoice.lower() == "temperature":
+        rad()
+    elif uchoice.lower() == 'luminocity':
+        while lumChoice != 'yes' or 'no' or 'Yes' or 'No':
+            lumChoice = input('''Does the Hawking temperature exceeds the rest mass energy of a particle type (type "yes or "no)''')
+            if lumChoice.lower() == 'yes':
+                yesLum()
+            elif lumChoice.lower() == 'no':
+                noLum()
+            else:
+                print('''
+                Say "yes" or "no"!''')
+        
