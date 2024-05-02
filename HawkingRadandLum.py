@@ -39,15 +39,28 @@ __        __   _                            _
  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|  (_)         
  ''')
 def rad():
-    userIn = int(input("What is the mass of your Black Hole (in Kg)? "))
-    h = 1.380649e-23
+    userIn = float(input("What is the mass of your black hole (Mʘ)? "))
+    h = 6.62607015*(10**-34)    
+    k = 1.380649e-23   
+    c = 299792458
+    H = h/(2*3.14)
+    c3 = c**3
+    G =  6.674*(10**-11)
+    T = (H*c3)/(8*3.14*k*G*userIn)  
+    print(''' 
+          The Hawking temperature of your black hole is ''' + str(T) + " Kelvin!")
+def yesLum():
+    d = 3
+def noLum():
+    d = 5
 def userChoice():
-    uchoice = input("Do you want to calculate Hawking temperature or luminocity? ")
+    uchoice = input('''Do you want to calculate Hawking temperature or luminocity (type "temperature" or "luminosity)? ''')
     if uchoice.lower() == "temperature":
         rad()
-    elif uchoice.lower() == 'luminocity':
+    elif uchoice.lower() == 'luminosity':
+        lumChoice = 1
         while lumChoice != 'yes' or 'no' or 'Yes' or 'No':
-            lumChoice = input('''Does the Hawking temperature exceeds the rest mass energy of a particle type (type "yes or "no)''')
+            lumChoice = input('''Does the Hawking temperature exceed the rest mass energy of a particle type (type "yes or "no)''')
             if lumChoice.lower() == 'yes':
                 yesLum()
             elif lumChoice.lower() == 'no':
@@ -55,4 +68,6 @@ def userChoice():
             else:
                 print('''
                 Say "yes" or "no"!''')
-        
+    else:
+        print('''Please type "temperature" or "luminosity"''')
+userChoice()
