@@ -50,7 +50,7 @@ def rad():
     print(''' 
           The Hawking temperature of your black hole is ''' + str(T) + " Kelvin!")
 def yesLum():
-    d = 3
+    
 def noLum():
     d = 5
 def userChoice():
@@ -60,7 +60,7 @@ def userChoice():
     elif uchoice.lower() == 'luminosity':
         lumChoice = 1
         while lumChoice != 'yes' or 'no' or 'Yes' or 'No':
-            lumChoice = input('''Does the Hawking temperature exceed the rest mass energy of a particle type (type "yes or "no)''')
+            lumChoice = input('''Does the Hawking temperature exceed the rest mass energy of a particle type (type "yes" or "no")''')
             if lumChoice.lower() == 'yes':
                 yesLum()
             elif lumChoice.lower() == 'no':
