@@ -8,7 +8,7 @@ Right now I have...
 - A Hawking raditation and luminocity calculator
 
 AGENDA:
-- Week of 5/6, finish up Hawking calculator
+- Week of 5/6, finish up Hawking calculator and the presentation slides!
 
 SOURCES:
 - ASCII art source https://www.asciiart.eu/
