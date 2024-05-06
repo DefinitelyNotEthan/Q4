@@ -8,9 +8,7 @@ Right now I have...
 - A Hawking raditation and luminocity calculator
 
 AGENDA:
-- Week of 22/4, finish Kepler and Hubble
-- Week of 29/4, fix any bugs in Hubble and start reaserching/start coding new laws for this project
-- Week of 6/5, bug fixes and start reaserching/start coding new laws for this project (follow this pattern for the rest of quarter four! Keep addding to the collection of calculators for as long as I can!)
+- Week of 5/6, finish up Hawking calculator
 
 SOURCES:
 - ASCII art source https://www.asciiart.eu/
