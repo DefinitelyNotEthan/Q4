@@ -50,24 +50,35 @@ def rad():
     print(''' 
           The Hawking temperature of your black hole is ''' + str(T) + " Kelvin!")
 def yesLum():
-    
+    A = float(input("What is the surface area of the black hole (m^2)? "))
+    o = 5.67*(10**-8)
+    T = float(input("What is the Hawking temperature (K)?  "))
+    neff = float(input("What is the effective number of relativistic particle types? "))
+    t4 = T**4
+    L = (A * (neff/2)) * o * t4
+    print("The Hawking luminosity of your black hole is " + str(L) + " Watts!")
 def noLum():
-    d = 5
+    A = float(input("What is the surface area of the black hole (m^2)? "))
+    o = 5.67*(10**-8)
+    T = float(input("What is the Hawking temperature(K)? "))
+    t4 = T**4
+    L = (A*o)*t4
+    print("The Hawking luminosity of your black hole is " + str(L) + " Watts!")
 def userChoice():
     uchoice = input('''Do you want to calculate Hawking temperature or luminocity (type "temperature" or "luminosity)? ''')
     if uchoice.lower() == "temperature":
         rad()
     elif uchoice.lower() == 'luminosity':
         lumChoice = 1
-        while lumChoice != 'yes' or 'no' or 'Yes' or 'No':
-            lumChoice = input('''Does the Hawking temperature exceed the rest mass energy of a particle type (type "yes" or "no")''')
-            if lumChoice.lower() == 'yes':
-                yesLum()
-            elif lumChoice.lower() == 'no':
-                noLum()
-            else:
-                print('''
-                Say "yes" or "no"!''')
+        lumChoice = input('''Does the Hawking temperature exceed the rest mass energy of a particle type (type "yes" or "no")? ''')
+        if lumChoice.lower() == 'yes':
+            yesLum()
+        elif lumChoice.lower() == 'no':
+            noLum()
+        else:
+            print('''
+            Say "yes" or "no"!''')
+            userChoice()
     else:
         print('''Please type "temperature" or "luminosity"''')
 userChoice()
