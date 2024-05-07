@@ -16,5 +16,5 @@ SOURCES:
 - On Hubble's Law https://sites.uni.edu/morgans/astro/course/Notes/section3/math13.html
 - On Approximating a Habitable Zone https://ulab.studentorg.berkeley.edu/static/doc/posters/s181.pdf
 - Categorising light based on wavelength https://www.pas.rochester.edu/~blackman/ast104/spectrum.html
-- On Hawking radiation and luminocity https://jila.colorado.edu/~ajsh/bh/hawk.html#:~:text=The%20Hawking%20luminosity%20L%20of,is%20the%20Stefan%2DBoltzmann%20constant.
+- On Hawking radiation and luminosity https://jila.colorado.edu/~ajsh/bh/hawk.html#:~:text=The%20Hawking%20luminosity%20L%20of,is%20the%20Stefan%2DBoltzmann%20constant.
 - My equation for Hawking temp https://web.stanford.edu/~oas/SI/SRGR/lib/BlackHoleThermoShort.pdf
