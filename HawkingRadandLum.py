@@ -66,7 +66,7 @@ def noLum():
     print("The Hawking luminosity of your black hole is " + str(L) + " Watts!")
 def userChoice():
     uchoice = input('''Do you want to calculate Hawking temperature or luminocity (type "temperature" or "luminosity)? ''')
-    if uchoice.lower() == "temperature":
+    if uchoice.lower() == "temperature" or uchoice.lower() == "radiation":
         rad()
     elif uchoice.lower() == 'luminosity':
         lumChoice = 1
