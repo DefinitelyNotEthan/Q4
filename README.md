@@ -8,7 +8,6 @@ Right now I have...
 - A Hawking raditation and luminocity calculator
 
 AGENDA:
-- Week of 5/6, finish up Hawking calculator and the presentation slides!
 - Week of 5/13, finish up Schwarzschild radius caculator!
 
 SOURCES:
