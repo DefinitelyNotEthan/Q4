@@ -6,6 +6,7 @@ Right now I have...
 - A Habitable Zone calculator
 - A Planck Relation calculator
 - A Hawking raditation and luminocity calculator
+- A Schwarzschild radius/gravitational field calculator
 
 AGENDA:
 - Week of 5/13, finish and bugfix the Schwarzschild radius caculator!
