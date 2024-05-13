@@ -8,7 +8,7 @@ Right now I have...
 - A Hawking raditation and luminocity calculator
 
 AGENDA:
-- Week of 5/13, finish up Schwarzschild radius caculator!
+- Week of 5/13, finish and bugfix the Schwarzschild radius caculator!
 
 SOURCES:
 - ASCII art source https://www.asciiart.eu/
