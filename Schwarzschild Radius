@@ -24,7 +24,7 @@ __        __   _                            _
 def theMath():
     m = float(input("What is the mass of your black hole (M☉)? "))
     c = 299792458
-    c2 = c**c
+    c2 = c*c
     G = 6.67 * (10**-11)
     gm = 2 * (G * m)
     rs = gm/c2
