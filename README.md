@@ -9,6 +9,7 @@ Right now I have...
 
 AGENDA:
 - Week of 5/6, finish up Hawking calculator and the presentation slides!
+
 SOURCES:
 - ASCII art source https://www.asciiart.eu/
 - On Kepler's Third Law https://people.astro.umass.edu/~weinberg/a114/handouts/concept1.pdf
