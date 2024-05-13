@@ -18,3 +18,4 @@ SOURCES:
 - Categorising light based on wavelength https://www.pas.rochester.edu/~blackman/ast104/spectrum.html
 - On Hawking radiation and luminosity https://jila.colorado.edu/~ajsh/bh/hawk.html#:~:text=The%20Hawking%20luminosity%20L%20of,is%20the%20Stefan%2DBoltzmann%20constant.
 - My equation for Hawking temp https://web.stanford.edu/~oas/SI/SRGR/lib/BlackHoleThermoShort.pdf
+- Schwarzschild radius equation https://scioly.org/wiki/images/c/c6/Formula_Sheet.pdf
