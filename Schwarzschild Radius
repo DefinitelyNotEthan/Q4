@@ -21,14 +21,13 @@ __        __   _                            _
 | |__| (_| | | (__| |_| | | (_| | || (_) | |  |_|                
  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|  (_)      
 ''')
-def theMath():
-    m = float(input("What is the mass of your black hole (in M☉)? "))
-    c = 299792458
-    c2 = c*c
-    G = (1.989 * (10**30)) * (6.67430* (10**-11))
-    rs = 2 * ((G * m)/c2)
-    rskm = rs/10
-    kgm = m * (1.989 * 10**30)
-    F = (G * kgm * 1)/rs
-    print("Your black hole has a Schwarzschild Radius of " + str(rskm) + " km, and a gravitational force at the event horizon of " + str(F) + " N!")
-theMath()
+m = float(input("What is the mass of your black hole (in M☉)? "))
+c = 299792458
+c2 = c*c
+G = (1.989 * (10**30)) * (6.67430* (10**-11))
+G2 =  6.674 * (10**-11)
+rs = 2 * ((G * m)/c2)
+rskm = rs/1000
+kgm = m * (1.989 * 10**30)
+F = (G2 * kgm * 1)/(rs**2)
+print("Your black hole has a Schwarzschild Radius of " + str(rskm) + " km, and a gravitational force at the event horizon of " + str(F) + " N!")
