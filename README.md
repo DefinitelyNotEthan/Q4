@@ -22,3 +22,4 @@ SOURCES:
 - Schwarzschild radius equation https://scioly.org/wiki/images/c/c6/Formula_Sheet.pdf
 - How I checked the Schwarzschild radius calculator https://www.omnicalculator.com/physics/schwarzschild-radius
 - How I checked the Hawking radiation and luminosity calculator https://www.vttoth.com/CMS/physics-notes/311-hawking-radiation-calculator
+- How I checked gravitational force https://www.omnicalculator.com/physics/gravitational-force
