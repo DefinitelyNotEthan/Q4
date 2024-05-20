@@ -1,0 +1,34 @@
+print('''
+__        __   _                            _        
+\ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___  
+ \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \ 
+  \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) |
+ _ \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/ 
+| |_| |__   ___  |  _ \ _ __ __ _| | _____           
+| __| '_ \ / _ \ | | | | '__/ _` | |/ / _ \          
+| |_| | | |  __/ | |_| | | | (_| |   <  __/          
+ \__|_| |_|\___| |____/|_|  \__,_|_|\_\___|          
+| ____|__ _ _   _  __ _| |_(_) ___  _ __             
+|  _| / _` | | | |/ _` | __| |/ _ \| '_ \            
+| |__| (_| | |_| | (_| | |_| | (_) | | | |           
+|_____\__, |\__,_|\__,_|\__|_|\___/|_| |_|     _     
+ / ___|__|_| | ___ _   _| | __ _| |_ ___  _ __| |    
+| |   / _` | |/ __| | | | |/ _` | __/ _ \| '__| |    
+| |__| (_| | | (__| |_| | | (_| | || (_) | |  |_|    
+ \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|  (_)    
+ (To be clear, the Drake Equation probably isn't accurate, but it's a cool thought experiment!')
+  ''')
+def drake():
+    r = 2.3
+    fp = .999
+    ne = 4
+    fi = float(input("In what percent of habitable planets does life emerge (use decimals)? "))
+    fs = float(input("In what percent of THOSE planets does intelligent life emerge (use decimals)? "))
+    ft = float(input("And what is the percent of those aliens that are capable of interstellar communication (use decimals)? "))
+    if fi > 1 or fs > 1 or ft > 1:
+        "Please make sure you entered all of your information as decimals!"
+        drake()
+    L = float(input("What is the average lifetime of an alien civilization (Earth years)?  "))
+    N = r * fp * ne * fi * fs * ft * L
+    print('''
+          There are about ''' + str(round(N)) + ''' civilization(s) in the galaxy!''')
