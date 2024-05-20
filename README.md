@@ -7,6 +7,7 @@ Right now I have...
 - A Planck Relation calculator
 - A Hawking raditation and luminocity calculator
 - A Schwarzschild radius/gravitational field calculator
+- A Drake Equation calculator
 
 AGENDA:
 - Week of 5/20, look for another equation to work on
