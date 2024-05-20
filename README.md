@@ -9,7 +9,7 @@ Right now I have...
 - A Schwarzschild radius/gravitational field calculator
 
 AGENDA:
-- Week of 5/13, finish and bugfix the Schwarzschild radius caculator!
+- Week of 5/20, look for another equation to work on
 
 SOURCES:
 - ASCII art source https://www.asciiart.eu/
