@@ -24,3 +24,4 @@ SOURCES:
 - How I checked the Schwarzschild radius calculator https://www.omnicalculator.com/physics/schwarzschild-radius
 - How I checked the Hawking radiation and luminosity calculator https://www.vttoth.com/CMS/physics-notes/311-hawking-radiation-calculator
 - How I checked gravitational force https://www.omnicalculator.com/physics/gravitational-force
+- How I checked the Drake Equation https://www.omnicalculator.com/physics/alien-civilization
