@@ -26,9 +26,12 @@ def drake():
     fs = float(input("In what percent of THOSE planets does intelligent life emerge (use decimals)? "))
     ft = float(input("And what is the percent of those aliens that are capable of interstellar communication (use decimals)? "))
     if fi > 1 or fs > 1 or ft > 1:
-        "Please make sure you entered all of your information as decimals!"
+        print('''
+              Please make sure you entered all of your information as decimals!
+              ''')
         drake()
     L = float(input("What is the average lifetime of an alien civilization (Earth years)?  "))
     N = r * fp * ne * fi * fs * ft * L
     print('''
           There are about ''' + str(round(N)) + ''' civilization(s) in the galaxy!''')
+drake()
