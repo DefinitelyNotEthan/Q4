@@ -10,7 +10,7 @@ Right now I have...
 - A Drake Equation calculator
 
 AGENDA:
-- Week of 5/20, look for another equation to work on
+- Week of 5/20, finish and bugfix the Drake Equation calculator
 
 SOURCES:
 - ASCII art source https://www.asciiart.eu/
