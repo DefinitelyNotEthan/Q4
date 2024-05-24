@@ -8,9 +8,11 @@ Right now I have...
 - A Hawking raditation and luminocity calculator
 - A Schwarzschild radius/gravitational field calculator
 - A Drake Equation calculator
+- An Astrobiological Copernican Limit calculator
 
 AGENDA:
 - Week of 5/20, finish and bugfix the Drake Equation calculator
+- Week of 5/26. finish and bug fix the Astrobiological Copernican Limits calculator
 
 SOURCES:
 - ASCII art source https://www.asciiart.eu/
@@ -24,4 +26,4 @@ SOURCES:
 - How I checked the Schwarzschild radius calculator https://www.omnicalculator.com/physics/schwarzschild-radius
 - How I checked the Hawking radiation and luminosity calculator https://www.vttoth.com/CMS/physics-notes/311-hawking-radiation-calculator
 - How I checked gravitational force https://www.omnicalculator.com/physics/gravitational-force
-- How I checked the Drake Equation https://www.omnicalculator.com/physics/alien-civilization
+- How I checked the Drake Equation AND the Astrobiological Copernican Limits https://www.omnicalculator.com/physics/alien-civilization
