@@ -7,6 +7,7 @@ Right now I have...
 - A Planck Relation calculator
 - A Hawking raditation and luminocity calculator
 - A Schwarzschild radius/gravitational field calculator
+And just for fun I also made...
 - A Drake Equation calculator
 - An Astrobiological Copernican Limit calculator
 
