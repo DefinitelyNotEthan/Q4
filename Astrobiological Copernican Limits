@@ -26,7 +26,7 @@ def acl():
     fL = float(input("What percent of stars are older than 5 billion years? "))
     if fL > 1:
         fL = fL/100
-    fHZ = float(input("How many of THOSE stars have a planet that can support life? "))
+    fHZ = float(input("And what percent of THOSE stars have a planet that can support life? "))
     if fHZ > 1:
         fHZ = fHZ/100
     fm = float(input("What is the percent of these habitable solar systems that have enough metal for advanced development and communication? "))
@@ -35,5 +35,7 @@ def acl():
     L = float(input("What is the average liftime of an advanced civilization (in years)? "))
     t = float(input("What is the average length of time in which life can exist on a specific planet (in billions of years)? "))
     N = nStar * fL * fHZ * fm * (L / t)
-    print("There are " + str(round(N)) + " alien civilizations in the galaxy!")
+    N = N/1000000000
+    print('''
+          There are " + str(round(N)) + " alien civilizations in the galaxy!''')
 acl()
