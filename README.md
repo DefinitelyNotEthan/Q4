@@ -30,4 +30,4 @@ SOURCES:
 - How I checked gravitational force https://www.omnicalculator.com/physics/gravitational-force
 - How I checked the Drake Equation AND the Astrobiological Copernican Limits https://www.omnicalculator.com/physics/alien-civilization
 - The astrophysics package I used for orbital resonance https://rebound.readthedocs.io/en/latest/
-- A guide for an orbitable resonance program in REBOUND https://rebound.readthedocs.io/en/latest/ipython_examples/Resonances_of_Jupiters_moons/
+- A guide for an orbitable resonance program in REBOUND that I based my orbitable resonance program off of https://rebound.readthedocs.io/en/latest/ipython_examples/Resonances_of_Jupiters_moons/
