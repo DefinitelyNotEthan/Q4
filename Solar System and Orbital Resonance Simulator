@@ -1,0 +1,129 @@
+print('''
+__        __   _                            _        
+\ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___  
+ \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \ 
+  \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) |
+   \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/ 
+ _ __ ___  _   _   / _ \ _ __| |__ (_) |_ __ _| |    
+| '_ ` _ \| | | | | | | | '__| '_ \| | __/ _` | |    
+| | | | | | |_| | | |_| | |  | |_) | | || (_| | |    
+|_|_|_| |_|\__, |  \___/|_|  |_.__/|_|\__\__,_|_|    
+|  _ \ ___ |___/ ___  _ __   __ _ _ __   ___ ___     
+| |_) / _ \/ __|/ _ \| '_ \ / _` | '_ \ / __/ _ \    
+|  _ <  __/\__ \ (_) | | | | (_| | | | | (_|  __/    
+|_|_\_\___||___/\___/|_| |_|\__,_|_| |_|\___\___|    
+/ ___|(_)_ __ ___  _   _| | __ _| |_(_) ___  _ __    
+\___ \| | '_ ` _ \| | | | |/ _` | __| |/ _ \| '_ \   
+ ___) | | | | | | | |_| | | (_| | |_| | (_) | | | |  
+|____/|_|_| |_| |_|\__,_|_|\__,_|\__|_|\___/|_| |_|  
+THIS PROGRAM IS HEAVILY BASED OFF OF A PROGRAM FOUND ON REBOUND'S WEBSITE
+''')
+import rebound
+import numpy as np
+%matplotlib inline
+import matplotlib.pyplot as plt
+
+sim = rebound.Simulation()
+sim.units = ('AU', 'days', 'Msun')
+
+labels = [input("Name a planet on the NASA Horizons database: "), input("Name a moon that orbits that planet on the NASA Horizons database: "),input("Name another moon that orbits that planet on the NASA Horizons database: "),input("Name another moon that orbits that planet on the NASA Horizons database: "), input("Name another moon on the NASA Horizons database: ")]
+sim.add(labels)
+
+os = sim.orbits()
+print("n_i (in rad/days) = %6.3f, %6.3f, %6.3f" % (os[0].n,os[1].n,os[2].n))
+print("P_i (in days)     = %6.3f, %6.3f, %6.3f" % (os[0].P,os[1].P,os[2].P))
+
+sim.move_to_com()
+op = rebound.OrbitPlot(sim, unitlabel="[AU]", color=True, periastron=True)
+
+sim.integrator = "whfast"
+sim.dt = 0.05 * os[0].P  # 5% of Io's period
+Nout = 100000            # number of points to display
+tmax = 80*365.25         # let the simulation run for 80 years
+Nmoons = len(labels)
+
+x = np.zeros((Nmoons,Nout))
+ecc = np.zeros((Nmoons,Nout))
+longitude = np.zeros((Nmoons,Nout))
+varpi = np.zeros((Nmoons,Nout))
+
+times = np.linspace(0.,tmax,Nout)
+ps = sim.particles
+
+for i,time in enumerate(times):
+    sim.integrate(time)
+    # note we use integrate() with the default exact_finish_time=1, which changes the timestep near 
+    # the outputs to match the output times we want.  This is what we want for a Fourier spectrum, 
+    # but technically breaks WHFast's symplectic nature.  Not a big deal here.
+    os = sim.orbits()
+    for j in range(Nmoons):
+        x[j][i] = ps[j+1].x 
+        ecc[j][i] = os[j].e
+        longitude[j][i] = os[j].l
+        varpi[j][i] = os[j].Omega + os[j].omega
+        
+fig = plt.figure(figsize=(12,5))
+ax = plt.subplot(111)
+plt.plot(times,ecc[0],label=labels[1])
+plt.plot(times,ecc[1],label=labels[2])
+plt.plot(times,ecc[2],label=labels[3])
+plt.plot(times,ecc[3],label=labels[4])
+ax.set_xlabel("Time (days)")
+ax.set_ylabel("Eccentricity")
+plt.legend();
+
+fig = plt.figure(figsize=(12,5))
+ax = plt.subplot(111)
+plt.plot(times,x[0],label=labels[1])
+plt.plot(times,x[1],label=labels[2])
+plt.plot(times,x[2],label=labels[3])
+plt.plot(times,x[3],label=labels[4])
+ax.set_xlim(0,0.2*365.25)
+ax.set_xlabel("Time (days)")
+ax.set_ylabel("x locations (AU)")
+ax.tick_params()
+plt.legend();
+
+def zeroTo360(val):
+    while val < 0:
+        val += 2*np.pi
+    while val > 2*np.pi:
+        val -= 2*np.pi
+    return (val*180/np.pi)
+
+def min180To180(val):
+    while val < -np.pi:
+        val += 2*np.pi
+    while val > np.pi:
+        val -= 2*np.pi
+    return (val*180/np.pi)
+
+# We can calculate theta, the resonant argument of the 1:2 Io-Europa orbital resonance,
+# which oscillates about 0 degrees:
+theta = [min180To180(2.*longitude[1][i] - longitude[0][i] - varpi[0][i]) for i in range(Nout)]
+
+# There is also a secular resonance argument, corresponding to the difference in the longitude of perihelions:
+# This angle oscillates around 180 degs, with a longer period component.
+theta_sec = [zeroTo360(-varpi[1][i] + varpi[0][i]) for i in range(Nout)]
+
+fig = plt.figure(figsize=(12,5))
+ax = plt.subplot(111)
+ax.plot(times,theta)  
+ax.plot(times,theta_sec) # secular resonance argument
+ax.set_xlim([0,20.*365.25])
+ax.set_ylim([-180,360.])
+ax.set_xlabel("time (days)")
+ax.set_ylabel(r"resonant argument $\theta_{2:1}$")
+ax.plot([0,100],[180,180],'k--')
+ax.plot([0,100],[0,0],'k--')
+
+thetaL = [zeroTo360(-longitude[0][i] + 3.*longitude[1][i] - 2.*longitude[2][i]) for i in range(Nout)]
+
+fig = plt.figure(figsize=(12,5))
+ax = plt.subplot(111)
+
+ax.plot(times,thetaL)
+ax.set_ylim([0,360.])
+ax.set_xlabel("time (days)")
+ax.set_ylabel(r"libration argument $\theta_{2:1}$")
+ax.plot([0,200],[180,180],'k--')
