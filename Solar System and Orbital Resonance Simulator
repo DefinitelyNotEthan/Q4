@@ -17,16 +17,24 @@ __        __   _                            _
  ___) | | | | | | | |_| | | (_| | |_| | (_) | | | |  
 |____/|_|_| |_| |_|\__,_|_|\__,_|\__|_|\___/|_| |_|  
 THIS PROGRAM IS HEAVILY BASED OFF OF A PROGRAM FOUND ON REBOUND'S WEBSITE
+
+MAKE SURE YOUR SYSTEM HAS AT LEAST FOUR PLANETS
 ''')
 import rebound
 import numpy as np
-%matplotlib inline
+#%matplotlib inline
 import matplotlib.pyplot as plt
 
 sim = rebound.Simulation()
 sim.units = ('AU', 'days', 'Msun')
 
-labels = [input("Name a planet on the NASA Horizons database: "), input("Name a moon that orbits that planet on the NASA Horizons database: "),input("Name another moon that orbits that planet on the NASA Horizons database: "),input("Name another moon that orbits that planet on the NASA Horizons database: "), input("Name another moon on the NASA Horizons database: ")]
+labels= []
+labels.append( input("Enter planet:") )
+while True:
+    user_input = input("Enter a moon (or q for quit): ")
+    if user_input == 'q':
+        break 
+    labels.append( user_input )
 sim.add(labels)
 
 os = sim.orbits()
@@ -40,7 +48,7 @@ sim.integrator = "whfast"
 sim.dt = 0.05 * os[0].P  # 5% of Io's period
 Nout = 100000            # number of points to display
 tmax = 80*365.25         # let the simulation run for 80 years
-Nmoons = len(labels)
+Nmoons = 4
 
 x = np.zeros((Nmoons,Nout))
 ecc = np.zeros((Nmoons,Nout))
