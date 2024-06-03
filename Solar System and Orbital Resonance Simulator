@@ -17,7 +17,7 @@ __        __   _                            _
  ___) | | | | | | | |_| | | (_| | |_| | (_) | | | |  
 |____/|_|_| |_| |_|\__,_|_|\__,_|\__|_|\___/|_| |_|  
 THIS PROGRAM IS HEAVILY BASED OFF OF A PROGRAM FOUND ON REBOUND'S WEBSITE
-
+https://rebound.readthedocs.io/en/latest/ipython_examples/Resonances_of_Jupiters_moons/
 MAKE SURE YOUR SYSTEM HAS AT LEAST FOUR PLANETS
 ''')
 import rebound
@@ -48,7 +48,7 @@ sim.integrator = "whfast"
 sim.dt = 0.05 * os[0].P  # 5% of Io's period
 Nout = 100000            # number of points to display
 tmax = 80*365.25         # let the simulation run for 80 years
-Nmoons = 4
+Nmoons = len(labels) - 1
 
 x = np.zeros((Nmoons,Nout))
 ecc = np.zeros((Nmoons,Nout))
@@ -70,7 +70,7 @@ for i,time in enumerate(times):
         longitude[j][i] = os[j].l
         varpi[j][i] = os[j].Omega + os[j].omega
         
-fig = plt.figure(figsize=(12,5))
+fig = plt.figure(figsize=(12,len(labels)))
 ax = plt.subplot(111)
 plt.plot(times,ecc[0],label=labels[1])
 plt.plot(times,ecc[1],label=labels[2])
